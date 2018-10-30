@@ -9,6 +9,7 @@ import org.bitbucket.eunjeon.seunjeon.{Analyzer => EunjeonAnalyzer}
 object Dictionary {
 
   // Words inside driver. This won't be modified in executor.
+  // private[packagename] 같은 패키지 아래 있는 애들은 이걸 공통으로 쓸 수 있다.
   private[nkp] var words = Seq.empty[String]
 
   /**
@@ -37,6 +38,9 @@ object Dictionary {
     isDictionaryUsed
   }
 
+  // String*, *붙은 이유
+  // method parameter that can take a variable number of arguments , i.e , a varargs field
+  // String* : Sequence of String
   def addWords(word: String, words: String*): this.type = addWords(word +: words)
 
   def addWords(words: Traversable[String]): this.type = chain {
