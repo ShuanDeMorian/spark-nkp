@@ -17,6 +17,9 @@ private[nkp] trait TokenizerParams extends Params {
 /**
   * Created by jun on 2016. 10. 23..
   */
+// unary란 '하나의' ( binary : 2)
+// spark UnaryTransformer:
+// Abstract class for transformers that take one input column, apply transformation, and output the result as a new column.
 class Tokenizer(override val uid: String) extends UnaryTransformer[String, Seq[String], Tokenizer]
   with TokenizerParams with DefaultParamsWritable {
 
