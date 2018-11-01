@@ -111,7 +111,9 @@ object Dictionary {
 
     addWords(words)
   }
-
+  //this.type은 유형이 객체의 클래스가 아닌 특정 객체를 나타내는 singleton type
+  //singleton은 인스턴스가 사용될 때에 똑같은 인스턴스를 만들어 내는 것이 아니라, 동일 인스턴스를 사용하게끔 하는 것이 기본 전략이다
+  //chain을 쓰는 이유는 Dictionary object가 변경되지 않고 계속해서 사용하게끔 하기 위한 것?
   private def chain(fn: => Any): this.type = {
     fn
     this
