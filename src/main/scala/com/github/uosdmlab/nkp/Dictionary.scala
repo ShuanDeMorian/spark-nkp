@@ -52,7 +52,7 @@ object Dictionary {
   }
 
   
-  // ???? chain이 뭐지?????
+  // test
   def reset(): this.type = chain {
     words = Seq.empty[String]
   }
