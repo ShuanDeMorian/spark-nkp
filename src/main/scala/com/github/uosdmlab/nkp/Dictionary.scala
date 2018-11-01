@@ -5,7 +5,9 @@ import org.apache.spark.sql._
 import org.apache.spark.sql.types._
 import org.bitbucket.eunjeon.seunjeon.{Analyzer => EunjeonAnalyzer}
 
-
+// 브로드캐스트 
+// 복수의 이그제큐터가 동일한 변수를 참조할 수 있도록 하여 효율적으로 처리하는 
+// 브로드캐스트가 아닌 일반 변수인 경우 매번 할당된 태스크의 개수와 같은 횟수만큼 동일한 데이터를 배포하여 비효율적이다.
 
 // 스파크 SQL : 구조화된 데이터셋을 간단하고 효율적으로 다루는 수단을 제공
 // * 데이터셋으로부터 조건에 맞는 데이터 추출
