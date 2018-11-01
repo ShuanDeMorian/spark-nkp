@@ -52,7 +52,7 @@ object Dictionary {
   }
 
   
-  // test
+  // test22222222222222222222222222222
   def reset(): this.type = chain {
     words = Seq.empty[String]
   }
