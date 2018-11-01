@@ -5,6 +5,13 @@ import org.apache.spark.sql._
 import org.apache.spark.sql.types._
 import org.bitbucket.eunjeon.seunjeon.{Analyzer => EunjeonAnalyzer}
 
+// 스파크 SQL : 구조화된 데이터셋을 간단하고 효율적으로 다루는 수단을 제공
+// * 데이터셋으로부터 조건에 맞는 데이터 추출
+// * JSON의 키와 테이블의 컬럼 등, 특정한 이름으로 데이터 추출
+// * 복수의 데이터셋 결합
+// * 그룹 단위로 집약
+// * 다른 형식의 구조화된 데이터셋으로 
+
 
 object Dictionary {
 
